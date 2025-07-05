@@ -52,6 +52,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v2
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: ${{ secrets.ECS_SERVICE }}
+        service: sabato-service-6qvj17fs
         cluster: ${{ secrets.ECS_CLUSTER }}
         wait-for-service-stability: true
