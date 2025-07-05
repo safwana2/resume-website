@@ -1,4 +1,5 @@
 name: burhan
+
 on:
   push:
     branches:
@@ -42,7 +43,8 @@ jobs:
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: ./task-definition.json
+        task-definition: resume-website/task-definition.json
+
         container-name: ${{ secrets.CONTAINER_NAME }} 
         image: ${{ secrets.ECR_REPOSITORY_URI }}:latest
 
