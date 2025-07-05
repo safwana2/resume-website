@@ -45,13 +45,4 @@ jobs:
         container-name: ${{ secrets.CONTAINER_NAME }} 
         image: ${{ secrets.ECR_REPOSITORY_URI }}:latest
 
-    - name: Debug Rendered Task Definition
-      run: cat ${{ steps.task-def.outputs.task-definition }}  
-      
-    - name: Deploy Amazon ECS task definition
-      uses: aws-actions/amazon-ecs-deploy-task-definition@v2
-      with:
-        task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: ${{ secrets.ECS_SERVICE }}
-        cluster: ${{ secrets.ECS_CLUSTER }}
-        wait-for-service-stability: true
+    
