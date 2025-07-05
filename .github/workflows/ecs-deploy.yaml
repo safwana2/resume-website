@@ -1,4 +1,5 @@
-name: Build and Deploy to ECS
+name: Build and Deploy to E
+
 
 on:
   push:
