@@ -1,3 +1,4 @@
+name: burhan
 on:
   push:
     branches:
