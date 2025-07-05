@@ -1,4 +1,4 @@
-name: Build and Deploy to E
+name: Build and Deploy to Ec2
 
 
 on:
@@ -64,4 +64,8 @@ jobs:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: ${{ env.ECS_SERVICE }}
           cluster: ${{ env.ECS_CLUSTER }}
+<<<<<<< HEAD
           wait-for-service-stability: true 
+=======
+          wait-for-service-stability: true 
+>>>>>>> 21412bf383f512da434cac90da56b282f3b5ecde
